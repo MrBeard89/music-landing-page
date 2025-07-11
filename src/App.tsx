@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import heroPhone from './assets/hero-mobile.png'
 import heroBlob from './assets/hero-blob.png'
+import spotifyBG from './assets/spotify-bg.png'
 
 // Simulated Spotify fetch (replace with real fetch if token available)
 const useSpotifyTopTracks = () => {
@@ -327,46 +328,42 @@ export default function App() {
       </section>
 
       {/* Spotify Section */}
-      <section
-        id='spotify'
-        className='py-20 px-4 md:px-16 bg-gradient-to-br from-[#1db954] to-[#191414] text-center'
-      >
-        <motion.h2
-          className='text-3xl md:text-5xl font-bold mb-8'
-          variants={fadeInUp}
-          initial='hidden'
-          whileInView='visible'
+      <section id='spotify' className='relative py-20 px-6 bg-neutral-900 overflow-hidden'>
+        <motion.div
+          className='text-center mb-12'
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          Top Spotify Tracks
-        </motion.h2>
-        <div className='max-w-xl mx-auto'>
-          {tracks.length === 0 ? (
-            <motion.p
-              className='text-gray-300'
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6 }}
+          <h2 className='text-4xl font-bold mb-4 text-green-400'>Your Top Tracks</h2>
+          <p className='text-lg text-gray-300'>Here are some of your recently played songs.</p>
+        </motion.div>
+
+        <motion.ul
+          className='relative z-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto'
+          initial='hidden'
+          animate='visible'
+          variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
+        >
+          {tracks.map((track, index) => (
+            <motion.li
+              key={index}
+              className='bg-neutral-800 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:bg-neutral-700 transition'
+              variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+              whileHover={{ scale: 1.03 }}
             >
-              Loading top tracks...
-            </motion.p>
-          ) : (
-            <ul className='space-y-4'>
-              {tracks.map((track, i) => (
-                <motion.li
-                  key={i}
-                  className='bg-black bg-opacity-30 p-4 rounded shadow-md'
-                  custom={i}
-                  variants={fadeListItem}
-                  initial='hidden'
-                  whileInView='visible'
-                  viewport={{ once: true }}
-                >
-                  {i + 1}. {track}
-                </motion.li>
-              ))}
-            </ul>
-          )}
+              <h3 className='text-xl font-semibold text-white'>{track}</h3>
+              <p className='text-sm text-gray-400 mt-2'>Your favorite beats, updated daily.</p>
+            </motion.li>
+          ))}
+        </motion.ul>
+
+        {/* Background Image (Right Side) */}
+        <div className='flex justify-center align-center relative '>
+          <div className='flex justify-center align-center absolute -top-140 w-80% opacity-25 z-0 '>
+            <img src={spotifyBG} alt='Listening girl background' className='w-full rounded-2xl' />
+          </div>
         </div>
       </section>
 
