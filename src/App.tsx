@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react'
 import heroPhone from './assets/hero-mobile.png'
 import heroBlob from './assets/hero-blob.png'
 import spotifyBG from './assets/spotify-bg.png'
+import headphoneSVG from '../public/headphone.svg'
 
 // Simulated Spotify fetch (replace with real fetch if token available)
 const useSpotifyTopTracks = () => {
@@ -31,14 +32,14 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  const fadeListItem = {
-    hidden: { opacity: 0, x: -30 },
-    visible: (i: number) => ({
-      opacity: 1,
-      x: 0,
-      transition: { delay: i * 0.2, duration: 0.6 },
-    }),
-  }
+  // const fadeListItem = {
+  //   hidden: { opacity: 0, x: -30 },
+  //   visible: (i: number) => ({
+  //     opacity: 1,
+  //     x: 0,
+  //     transition: { delay: i * 0.2, duration: 0.6 },
+  //   }),
+  // }
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -78,7 +79,10 @@ export default function App() {
       {/* Navigation */}
       <header className='fixed top-0 w-full bg-black bg-opacity-70 z-50 shadow-md'>
         <nav className='flex justify-between items-center px-6 py-4'>
-          <div className='text-xl font-bold'>Feel the Beat</div>
+          <div className='flex justify-center align-center gap-2 text-xl font-bold'>
+            <img src={headphoneSVG} alt='headphone icon' className='w-10' />
+            <h1 className='flex text-align-center p-2'>Feel the Beat</h1>
+          </div>
           <div className='md:hidden'>
             <button onClick={toggleMenu} aria-label='Toggle menu'>
               {menuOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
@@ -367,24 +371,112 @@ export default function App() {
         </div>
       </section>
 
-      {/* Footer Section */}
-      <footer className='bg-black py-10 border-t border-gray-800'>
-        <div className='max-w-6xl mx-auto px-4 md:flex md:justify-between text-center md:text-left'>
-          <p className='text-gray-500 mb-4 md:mb-0'>© 2025 Feel the Beat. All rights reserved.</p>
-          <div className='space-x-6 text-sm'>
-            <a href='#' className='text-gray-400 hover:text-white'>
+      {/* Footer */}
+      <footer className='bg-black text-gray-400 px-6 pt-16 pb-12'>
+        <div className='max-w-6xl mx-auto flex-direction-column sm:gap-4 sm:flex md:justify-between px-6'>
+          <div>
+            <h3 className='text-white text-xl font-bold mb-4 pt-2'>Feel the Beat</h3>
+          </div>
+          <div className='my-4 sm:mx-4'>
+            <h4 className='uppercase font-semibold text-sm mb-2 text-white mb-4'>Company</h4>
+            <ul className='space-y-1'>
+              <li>
+                <a href='#' className='hover:text-white'>
+                  About
+                </a>
+              </li>
+              <li>
+                <a href='#' className='hover:text-white'>
+                  Jobs
+                </a>
+              </li>
+              <li>
+                <a href='#' className='hover:text-white'>
+                  For the Record
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className='my-4 sm:mx-4'>
+            <h4 className='uppercase font-semibold text-sm mb-2 text-white mb-4'>Communities</h4>
+            <ul className='space-y-1'>
+              <li>
+                <a href='#' className='hover:text-white'>
+                  For Artists
+                </a>
+              </li>
+              <li>
+                <a href='#' className='hover:text-white'>
+                  Developers
+                </a>
+              </li>
+              <li>
+                <a href='#' className='hover:text-white'>
+                  Brands
+                </a>
+              </li>
+              <li>
+                <a href='#' className='hover:text-white'>
+                  Investors
+                </a>
+              </li>
+              <li>
+                <a href='#' className='hover:text-white'>
+                  Vendors
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className='my-4 sm:mx-4'>
+            <h4 className='uppercase font-semibold text-sm mb-2 text-white mb-4'>Useful Links</h4>
+            <ul className='space-y-1'>
+              <li>
+                <a href='#' className='hover:text-white'>
+                  Help
+                </a>
+              </li>
+              <li>
+                <a href='#' className='hover:text-white'>
+                  Web Player
+                </a>
+              </li>
+              <li>
+                <a href='#' className='hover:text-white'>
+                  Free Mobile App
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className='mt-12 border-t border-gray-700 pt-6 text-sm text-center space-y-2'>
+          <div className='flex flex-wrap justify-center gap-4'>
+            <a href='#' className='hover:text-white'>
+              Legal
+            </a>
+            <a href='#' className='hover:text-white'>
+              Privacy Center
+            </a>
+            <a href='#' className='hover:text-white'>
               Privacy Policy
             </a>
-            <a href='#' className='text-gray-400 hover:text-white'>
-              Terms of Service
+            <a href='#' className='hover:text-white'>
+              Cookies
             </a>
-            <a href='#' className='text-gray-400 hover:text-white'>
-              Contact
+            <a href='#' className='hover:text-white'>
+              About Ads
             </a>
-            <a href='#' className='text-gray-400 hover:text-white'>
-              Help Center
+            <a href='#' className='hover:text-white'>
+              Additional CA Privacy Disclosures
             </a>
           </div>
+          <p className='flex justify-center items-center gap-2'>
+            <span>USA</span>
+            <span role='img' aria-label='flag'>
+              🇺🇸
+            </span>
+          </p>
+          <p className='mt-2'>© 2025 Feel the Beat</p>
         </div>
       </footer>
     </div>
