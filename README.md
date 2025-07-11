@@ -1,69 +1,42 @@
-# React + TypeScript + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    <a href="https://ibb.co/gM27kwjf"><img src="https://i.ibb.co/Z6jJqKLF/Ke-pernyo-ke-p-2025-07-11-13-05-50.png" alt="Ke-pernyo-ke-p-2025-07-11-13-05-50" width="550px"></a>
 
-Currently, two official plugins are available:
+  <h3 align="center">Feel the Beat Landing Page</h3>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+</div>
 
-## Expanding the ESLint configuration
+## <a name="tech-stack">⚙️ Tech Stack</a>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- Tailwind
+- Framer Motion
+- Lucide_React
+- Typescript
+- Vite
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## <a name="features">🔋 Főbb tulajdonságok</a>
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+👉 **Mobile first szemlélet**: Mobil nézettől a monitor méretekig.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+👉 **Reszponzív design**: Minden képernyőn jól kinéző design.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## <a name="toughts">📝 Telepítés</a>
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+👉 **Megtekintés github pages linken keresztül** vagy,
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+👉 <a href="https://mrbeard89.github.io/music-landing-page/">https://mrbeard89.github.io/music-landing-page/</a>
+
+👉 Repo fejléc jobb oldalán, Code gomb megnyomása.
+
+👉 Felugró ablak alján "Download Zip" gomb megnyomása.
+
+👉 A letöltött tömörített fájlt csomagoljuk ki.
+
+👉 A kicsomagolás után a főkönyvtár mappáját(amiben src stb található), töltsük be VScodeal.
+
+👉 Konzolban "npm i" majd Enter.
+
+👉 Indításhoz pedig konzolba írjuk be hogy "npm run dev".
+
+👉 Böngészőbe átírányit a VScode, majd láthatjuk az appot.
