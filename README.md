@@ -1,6 +1,8 @@
 <div align="center">
 
-    <a href="https://ibb.co/gM27kwjf"><img src="https://i.ibb.co/Z6jJqKLF/Ke-pernyo-ke-p-2025-07-11-13-05-50.png" alt="Ke-pernyo-ke-p-2025-07-11-13-05-50" width="550px"></a>
+   <a>
+   <img src="https://i.ibb.co/Z6jJqKLF/Ke-pernyo-ke-p-2025-07-11-13-05-50.png" alt="Ke-pernyo-ke-p-2025-07-11-13-05-50" width="550px">
+   </a>
 
   <h3 align="center">Feel the Beat Landing Page</h3>
 
