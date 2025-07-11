@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react'
 import heroPhone from './assets/hero-mobile.png'
 import heroBlob from './assets/hero-blob.png'
 import spotifyBG from './assets/spotify-bg.png'
-import headphoneSVG from '../public/headphone.svg'
+import headphoneSVG from './assets/headphone.svg'
 
 // Simulated Spotify fetch (replace with real fetch if token available)
 const useSpotifyTopTracks = () => {
